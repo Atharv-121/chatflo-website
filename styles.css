@@ -1,0 +1,213 @@
+:root {
+    --bg-color: #0b0f19;
+    --surface-color: rgba(25, 33, 50, 0.7);
+    --primary-glow: #b700ff;;
+    --secondary-glow: #8b5cf6;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 15, 25, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #b700ff;
+}
+
+.navbar .links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+    color: #b700ff;;
+}
+
+.hero {
+    text-align: center;
+    padding: 12rem 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+   color: #fff;
+    max-width: 800px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.btn {
+    background: #b700ff;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.container p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.custom-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.custom-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.custom-form input,
+.custom-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-glow);
+}
+
+.mv-grid, .features-grid, .data-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.mv-grid { grid-template-columns: 1fr 1fr; background: transparent; padding: 0; box-shadow: none; border: none; }
+.features-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.mv-card, .feature-box, .tech-card {
+    background: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+}
+
+.mv-card:hover, .feature-box:hover, .tech-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+.mv-card h3, .feature-box h4, .tech-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.feature-box h4 {
+    color: #b700ff;;
+}
+
+.tech-card h3 a {
+    color: white; 
+    transition: color 0.2s;
+}
+
+.tech-card h3 a:hover {
+    color: #c084fc;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .navbar { flex-direction: column; gap: 1rem; }
+    .navbar .links a { margin: 0 0.5rem; }
+    .mv-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatFlo | Waitlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>ChatFlo</h2>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="waitlist.html">Waitlist</a>
+            <a href="tech.html">Tech Advancements</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Join the Waitlist</h2>
+        <p>Be the first to know when we launch.</p>
+        <form id="waitlistForm" class="custom-form">
+            <div class="form-group">
+                <label for="waitlistEmail">Email Address:</label>
+                <input type="email" id="waitlistEmail" required>
+            </div>
+            <div class="form-group radio-group">
+                <p>Would you like to receive notifications?</p>
+                <label><input type="radio" name="updates" checked value="Yes" required> Yes, keep me updated</label>
+                <label><input type="radio" name="updates" value="No" required> No, just add me to the list</label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
