@@ -36,6 +36,16 @@ if (contactForm) {
     });
 }
 
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+if (mobileMenu && navLinks) {
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('is-active');
+        navLinks.classList.toggle('active');
+    });
+}
+
 const waitlistForm = document.getElementById('waitlistForm');
 if (waitlistForm) {
     waitlistForm.addEventListener('submit', function(e) {
